@@ -28,7 +28,7 @@ jobs:
 
       - name: docker build
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/docker:v${{ env.RELEASE_VERSION }} ./Dockerfile
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/docker:v${{ env.RELEASE_VERSION }} .
 
       - name: docker images check
         run: docker images
